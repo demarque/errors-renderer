@@ -5,7 +5,7 @@ module ErrorsRenderer::Implants
     end
 
     def add_to_model(code)
-      self.add 'model_error', ErrorsRenderer::Localizor.get_message_from_code(code)
+      self.add :base, ErrorsRenderer::Localizor.get_message_from_code(code)
     end
   end
 end
