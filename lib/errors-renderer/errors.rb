@@ -59,7 +59,7 @@ module ErrorsRenderer
     def parse_error(code, message, field=nil, full_message=nil)
       error = { code: code, message: message }
 
-      if field == :base
+      if field == :model_error
         field = nil
         full_message = message
       end
