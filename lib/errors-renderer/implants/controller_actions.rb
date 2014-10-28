@@ -17,9 +17,7 @@ module ErrorsRenderer::Implants
       self.response.error_codes = @response_error_codes
       self.response.status = status
       self.respond_to do |format|
-        format.any(:json, :xml) { self.render(template: options[:template]) }
-        # html and neatpage yet
-        format.any { self.render(template: 'errors/response') }
+        format.any { self.render(options) }
       end
     end
 
