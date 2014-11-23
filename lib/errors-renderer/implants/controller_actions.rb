@@ -16,8 +16,12 @@ module ErrorsRenderer::Implants
 
       self.response.error_codes = @response_error_codes
       self.response.status = status
-      self.respond_to do |format|
-        format.any { self.render(options) }
+      if request.format == '*/*'
+        self.render(options.merge(formats: ['html']))
+      else
+        self.respond_to do |format|
+          format.any { self.render(options) }
+        end
       end
     end
 
