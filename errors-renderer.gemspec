@@ -1,4 +1,3 @@
-# -*- encoding: utf-8 -*-
 $:.push File.expand_path("../lib", __FILE__)
 
 Gem::Specification.new do |s|
@@ -17,6 +16,7 @@ Gem::Specification.new do |s|
   s.files         = Dir.glob('{lib,spec}/**/*') + %w(LICENSE README.md Rakefile Gemfile)
   s.require_paths = ["lib"]
 
-  s.add_development_dependency('rake', ['>= 0.8.7'])
-  s.add_development_dependency('rspec', ['>= 2.0'])
+  s.add_development_dependency('rails', '~> 4.2')
+  s.add_development_dependency('rake', '~> 13.0')
+  s.add_development_dependency('rspec', '~> 3.4')
 end

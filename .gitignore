@@ -4,3 +4,6 @@
 Gemfile.lock
 pkg/*
 tmp/*
+
+# code coverage reports
+/coverage/
