@@ -1,6 +1,5 @@
 *.gem
 .bundle
-.DS_Store
 .rspec
 Gemfile.lock
 pkg/*
